@@ -127,10 +127,22 @@ button_equal.grid(row=3, column=2)
 button_decimal = Button(frame, text='.', font=('Arial', 20), width=3, height=1, command=lambda: on_button_click('.'))
 button_decimal.grid(row=3, column=0)
 
-button_clear = Button(window, text='Limpar', font=('Arial', 20), width=10, height=1, command=clear)
+button_clear = Button(window, text='Limpar', font=('Arial', 20), width=11, height=1, command=clear)
 button_clear.pack()
 
-button_back = Button(window, text='←', font=('Arial', 20), width=10, height=1, command=back_button_click)
+button_back = Button(window, text='←', font=('Arial', 20), width=11, height=1, command=back_button_click)
 button_back.pack()
+
+button_parentesis_open = Button(frame, text='(', font=('Arial', 20), width=3, height=1, command=lambda: on_button_click('('))
+button_parentesis_open.grid(row=0, column=4)
+
+button_parentesis_close = Button(frame, text=')', font=('Arial', 20), width=3, height=1, command=lambda: on_button_click(')'))
+button_parentesis_close.grid(row=1, column=4)
+
+button_power = Button(frame, text='^', font=('Arial', 20), width=3, height=1, command=lambda: on_button_click('**'))
+button_power.grid(row=2, column=4)
+
+button_mod = Button(frame, text='%', font=('Arial', 20), width=3, height=1, command=lambda: on_button_click('%'))
+button_mod.grid(row=3, column=4)
 
 window.mainloop() # inicia a janela
